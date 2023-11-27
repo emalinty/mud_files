@@ -1,11 +1,5 @@
 {
 	"ietf-mud:mud": {
-		"mud-version": 1,
-		"mud-url": "https://mudfileserver/ciscopi2",
-		"last-update": "2018-12-05T19:42:01+00:00",
-		"cache-validity": 24,
-		"is-supported": true,
-		"systeminfo": "ingress/egress ",
 		"from-device-policy": {
 			"access-lists": {
 				"access-list": [{

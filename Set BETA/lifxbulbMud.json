@@ -1,11 +1,5 @@
 {
   "ietf-mud:mud" : {
-    "mud-version" : 1,
-    "mud-url" : "https://lifxbulb.com/lifxbulb",
-    "last-update" : "2018-09-30T16:51:45.044+10:00",
-    "cache-validity" : 100,
-    "is-supported" : true,
-    "systeminfo" : "lifxbulb",
     "from-device-policy" : {
       "access-lists" : {
         "access-list" : [ {

@@ -1,14 +1,5 @@
 {
 	"ietf-mud:mud": {
-		"mud-version": 1,
-		"mud-url": "https://mudfileserver/ciscopi2",
-    		"mud-signature": "https://https://www.cisco.com/us/p/P-WSP080//ciscopi2.p7s",
-    		"last-update": "2020-09-17T18:36:10+00:00",
-    		"cache-validity": 48,
-		"is-supported": true,
-		"systeminfo": "ingress/egress ",
-		"mfg-name": "Belkin",
-		"documentation": "https://www.belkin.com/us/support-product?rnId=01t2T000004rP",
 		"from-device-policy": {
 			"access-lists": {
 				"access-list": [{

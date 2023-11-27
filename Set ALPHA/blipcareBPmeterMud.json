@@ -1,11 +1,5 @@
 {
   "ietf-mud:mud" : {
-    "mud-version" : 1,
-    "mud-url" : "https://blipcarebpmeter.com/blipcarebpmeter",
-    "last-update" : "2018-09-27T12:55:18.098+10:00",
-    "cache-validity" : 100,
-    "is-supported" : true,
-    "systeminfo" : "blipcareBPmeter",
     "from-device-policy" : {
       "access-lists" : {
         "access-list" : [ {

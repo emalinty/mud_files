@@ -1,11 +1,5 @@
 {
   "ietf-mud:mud" : {
-    "mud-version" : 1,
-    "mud-url" : "https://ihomepowerplug.com/ihomepowerplug",
-    "last-update" : "2018-09-30T15:43:44.264+10:00",
-    "cache-validity" : 100,
-    "is-supported" : true,
-    "systeminfo" : "ihomepowerplug",
     "from-device-policy" : {
       "access-lists" : {
         "access-list" : [ {

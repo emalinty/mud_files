@@ -1,14 +1,5 @@
 {
     "ietf-mud:mud": {
-      "mud-version": 1,
-      "mud-url": "https://smartstuff.com/coffeemaker",
-      "last-update": "2019-08-06T22:42:41+00:00",
-      "cache-validity": 48,
-      "is-supported": true,
-      "systeminfo": "This is a smart coffee maker",
-      "mfg-name": "Smart Stuff LLC.",
-      "documentation": "https://smartstuff.com/docs",
-      "model-name": "coffeemaker",
       "from-device-policy": {
         "access-lists": {
           "access-list": [

@@ -1,11 +1,5 @@
 {
   "ietf-mud:mud" : {
-    "mud-version" : 1,
-    "mud-url" : "https://hellobarbie.com/hellobarbie",
-    "last-update" : "2018-09-20T06:25:45.747+10:00",
-    "cache-validity" : 100,
-    "is-supported" : true,
-    "systeminfo" : "hellobarbie",
     "from-device-policy" : {
       "access-lists" : {
         "access-list" : [ {

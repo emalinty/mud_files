@@ -1,11 +1,5 @@
 {
   "ietf-mud:mud" : {
-    "mud-version" : 1,
-    "mud-url" : "https://smartthings.com/smartthings",
-    "last-update" : "2018-10-01T01:15:15.052+10:00",
-    "cache-validity" : 100,
-    "is-supported" : true,
-    "systeminfo" : "SmartThings",
     "from-device-policy" : {
       "access-lists" : {
         "access-list" : [ {
