@@ -1,0 +1,78 @@
+{
+  "ietf-mud:mud": {
+    "mud-version": 1,
+    "mud-url": "https:///www.belkin.com/us/p/P-WSP080/WSP080.json",
+    "mud-signature": "https://www.belkin.com/us/p/P-WSP080//WSP080.p7s",
+    "last-update": "2020-09-17T18:36:10+00:00",
+    "cache-validity": 48,
+    "is-supported": true,
+    "systeminfo": "Belkin Wemi WiFi SmartPlug",
+    "mfg-name": "Belkin",		
+    "documentation": "https://www.belkin.com/us/support-product?rnId=01t2T000004rP",
+    "model-name": "WSP080",
+    "from-device-policy": {
+      "access-lists": {
+        "access-list": [
+          {
+            "name": "mud-86451-v4fr"
+          }
+        ]
+      }
+    },
+    "to-device-policy": {
+      "access-lists": {
+        "access-list": [
+          {
+            "name": "mud-86451-v4to"
+          }
+        ]
+      }
+    }
+  },
+  "ietf-access-control-list:acls": {
+    "acl": [
+      {
+        "name": "mud-86451-v4to",
+        "type": "ipv4-acl-type",
+        "aces": {
+          "ace": [
+            {
+              "name": "myctl0-todev",
+              "matches": {
+                "ietf-mud:mud": {
+                  "my-controller": [
+                    null
+                  ]
+                }
+              },
+              "actions": {
+                "forwarding": "accept"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "mud-86451-v4fr",
+        "type": "ipv4-acl-type",
+        "aces": {
+          "ace": [
+            {
+              "name": "myctl0-frdev",
+              "matches": {
+                "ietf-mud:mud": {
+                  "my-controller": [
+                    null
+                  ]
+                }
+              },
+              "actions": {
+                "forwarding": "accept"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

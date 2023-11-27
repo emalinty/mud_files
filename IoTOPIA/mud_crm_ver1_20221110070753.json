@@ -1,0 +1,155 @@
+    {
+      "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "https://oururl/serialnumber",
+        "last-update": "2022-08-11T11:20:51+01:00",
+        "cache-validity": 48,
+        "is-supported": true,
+        "systeminfo": "Common Radio Module/serialnumber",
+        "from-device-policy": {
+          "access-lists": {
+            "access-list": [
+              {
+                "name": "dev-fr"
+              }
+            ]
+          }
+        },
+        "to-device-policy": {
+          "access-lists": {
+            "access-list": [
+              {
+                "name": "dev-to"
+              }
+            ]
+          }
+        }
+      },
+      "ietf-access-control-list:acls": {
+        "acl": [
+          {
+            "name": "dev-to",
+            "type": "ipv4-acl-type",
+            "aces": {
+              "ace": [
+                {
+                  "name": "dns-to",
+                  "matches": {
+                    "ipv4": {
+                      "ietf-acldns:src-dnsname": "www.mydnsaddress.com"
+                    }
+                  },
+                  "actions": {
+                    "forwarding": "accept"
+                  }
+                },
+                {
+                  "name": "Cloud-to",
+                  "matches": {
+                    "ipv4": {
+                      "ietf-acldns:src-dnsname": "www.mybrokeraddress.com",
+                      "protocol": 6
+                    }
+                  },
+                  "actions": {
+                    "forwarding": "accept"
+                  }
+                },
+                {
+                  "name": "Host-to",
+                  "matches": {
+                    "ipv4": {
+                      "ietf-acldns:src-dnsname": "www.myfilehostserver.com",
+                      "protocol": 6
+                    }
+                  },
+                  "actions": {
+                    "forwarding": "accept"
+                  }
+                },
+                {
+                  "name": "NTP-to",
+                  "matches": {
+                    "ipv4": {
+                      "ietf-acldns:src-dnsname": "www.myntpaddress.com",
+                      "protocol": 6
+                    }
+                  },
+                  "actions": {
+                    "forwarding": "accept"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "dev-fr",
+            "type": "ipv4-acl-type",
+            "aces": {
+              "ace": [
+                {
+                  "name": "dns-fr",
+                  "matches": {
+                    "ipv4": {
+                      "ietf-acldns:dst-dnsname": "www.mydnsaddress.com",
+                      "protocol": 6
+                    }
+                  },
+                  "actions": {
+                    "forwarding": "accept"
+                  }
+                },
+                {
+                  "name": "Cloud-fr",
+                  "matches": {
+                    "ipv4": {
+                      "ietf-acldns:dst-dnsname": "www.mybrokeraddress.com",
+                      "protocol": 6
+                    },
+                    "tcp": {
+                      "destination-port": {
+                        "operator": "eq",
+                        "port": 443
+                      }
+                    }
+                  },
+                  "actions": {
+                    "forwarding": "accept"
+                  }
+                },
+                {
+                  "name": "Host-fr",
+                  "matches": {
+                    "ipv4": {
+                      "ietf-acldns:dst-dnsname": "www.myfilehostserver.com",
+                      "protocol": 6
+                    }
+                  },
+                  "actions": {
+                    "forwarding": "accept"
+                  }
+                },
+                {
+                  "name": "NTP-fr",
+                  "matches": {
+                    "ipv4": {
+                      "ietf-acldns:dst-dnsname": "www.myntpaddress.com",
+                      "protocol": 6
+                    },
+                    "tcp": {
+                      "destination-port": {
+                        "operator": "eq",
+                        "port": 123
+                      }
+                    }
+                  },
+                  "actions": {
+                    "forwarding": "accept"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
